@@ -1,5 +1,6 @@
 import React from 'react';
-import css from './TransactionHistoryItem.module.css'
+import css from './TransactionHistoryItem.module.css';
+import PropTypes from 'prop-types';
 
 const TransactionHistoryItem = ({
   transaction: { type, amount, currency },
@@ -14,3 +15,12 @@ const TransactionHistoryItem = ({
 };
 
 export default TransactionHistoryItem;
+
+TransactionHistoryItem.propTypes = {
+  transaction: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }).isRequired,
+};
