@@ -4,10 +4,7 @@ import StatisticItem from 'components/Profile/StatisticItem/StatisticItem';
 import PropTypes from 'prop-types';
 
 const Statistics = ({ data }) => {
-  // const {} = this.data;
-  // console.log(data);
   const newdata = data.map(item => <StatisticItem key={item.id} {...item} />);
-  // console.log(newdata);
   return (
     <section className={css.statistics}>
       <h2 className={css.title}>Upload stats</h2>

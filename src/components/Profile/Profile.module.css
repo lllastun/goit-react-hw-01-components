@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   height: 370px;
   width: 280px;
   background-color: #fff;
@@ -21,7 +20,7 @@
 
 .avatar {
   width: 162px;
-    margin: 16px;
+  margin: 16px;
   border-radius: 10%;
   background-color: aquamarine;
 }
@@ -48,12 +47,10 @@
   width: 100%;
   background-color: var(--accentColor);
   gap: 20px;
-  /* padding: 20px; */
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .stats > li {
-  /* border: 1px solid rgba(0, 0, 0, 0.05); */
   display: flex;
   gap: 4px;
   flex-direction: column;

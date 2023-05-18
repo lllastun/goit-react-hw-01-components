@@ -1,9 +1,11 @@
 .type::first-letter {
   text-transform: uppercase;
 }
+
 * {
   text-align: center;
 }
+
 tr {
   color: var(--textColor);
   height: 28px;
