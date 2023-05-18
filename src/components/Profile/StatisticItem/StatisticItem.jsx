@@ -1,11 +1,8 @@
 import React from 'react';
 import css from './StatisticItem.module.css';
+import PropTypes from 'prop-types';
 
-const StatisticItem = ({ id, label, percentage }) => {
-  // const { id, label, percenatage } = data;
-  // console.log(data);
-  // console.log(data.data.label);
-  // console.log(percenatage);
+const StatisticItem = ({ label, percentage }) => {
   return (
     <li className={css.item}>
       <span className={css.label}>{label}</span>
@@ -15,3 +12,8 @@ const StatisticItem = ({ id, label, percentage }) => {
 };
 
 export default StatisticItem;
+
+StatisticItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};

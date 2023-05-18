@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './Statistics.module.css';
 import StatisticItem from 'components/Profile/StatisticItem/StatisticItem';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ data }) => {
   // const {} = this.data;
@@ -16,3 +17,13 @@ const Statistics = ({ data }) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

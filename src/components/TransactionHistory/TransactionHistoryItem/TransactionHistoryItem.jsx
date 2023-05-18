@@ -1,15 +1,14 @@
 import React from 'react';
+import css from './TransactionHistoryItem.module.css'
 
-const TransactionHistoryItem = ( transaction) => {
-  // { id, type, amount, currency }
-//  console.log(type, amount, currency);
- console.log(transaction);
- console.log('dadwdaw');
+const TransactionHistoryItem = ({
+  transaction: { type, amount, currency },
+}) => {
   return (
     <tr>
-      {/* <td>{type}</td>
+      <td className={css.type}>{type}</td>
       <td>{amount}</td>
-      <td>{currency}</td> */}
+      <td>{currency}</td>
     </tr>
   );
 };

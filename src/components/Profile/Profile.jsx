@@ -1,20 +1,15 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import data from './data/user.json';
+import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
-export const Profile = props => {
-  // username, tag, avatar, location, stats
-  // console.log(data);
-  // console.log(props);
-  // console.log(props.user.username);
-  // const username = data.username;
-  // const tag = data.tag;
-  // const location = data.location;
-  // const avatar = data.avatar;
-  // const stats = data.stats;
-
-  const { username, tag, avatar, location, stats:{likes, followers, views} } = props.user;
+export const Profile = user => {
+  const {
+    username,
+    tag,
+    avatar,
+    location,
+    stats: { likes, followers, views },
+  } = user.user;
 
   return (
     <div className={css.profile}>
@@ -43,6 +38,16 @@ export const Profile = props => {
   );
 };
 
-Profile.propTypes = {};
-
-//  Profile
+Profile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
