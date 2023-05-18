@@ -3,6 +3,7 @@
   --blackColor: #122236;
   --textColor: #97a2ae;
   --accentColor: #f3f6f9;
+  --whiteText: #ffecff;
  
 }
 
@@ -44,6 +45,7 @@ img {
 
 body {
   margin: 0;
+  padding: 12px;
   font-weight: 500;
 }
 
