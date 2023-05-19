@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Statistics.module.css';
-import StatisticItem from 'components/Profile/StatisticItem/StatisticItem';
+import StatisticItem from 'components/Statistics/StatisticItem/StatisticItem';
 import PropTypes from 'prop-types';
 
 const Statistics = ({ data }) => {
